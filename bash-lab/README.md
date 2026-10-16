@@ -70,3 +70,28 @@ Go to a specific directory:
 - Bash
 
 **Note:** Running the script normally does not change the working directory of the parent terminal shell. Use `source ./change-directory.sh /path` if you want the change to affect your current shell.
+
+### `ls-wrapper.sh`
+
+A Bash wrapper for `ls` that supports selected options and multiple file or directory paths.
+
+**Supported Options:** `-l`, `-a`, `-d`, `-i`, `-R`
+
+**Usage**
+
+```bash
+./ls-wrapper.sh
+./ls-wrapper.sh -la
+./ls-wrapper.sh -l /etc /var
+./ls-wrapper.sh -R -- /path/to/directory
+```
+
+**How it works**
+
+- Accepts supported options, including combined options such as `-la`.
+- Allows multiple file and directory paths.
+- Uses `--` to stop option parsing and treat remaining arguments as paths.
+- Reports unsupported options and exits with status code `2`.
+- Defaults to the current directory when no paths are provided.
+
+**Requirements:** Bash and `ls`.
