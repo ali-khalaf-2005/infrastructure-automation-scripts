@@ -1,0 +1,44 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+    echo "Usage : ./mytest FILE_OR_DIRECTORY"
+    exit 1
+fi
+
+target="$1"
+
+if [ -e "$target" ]; then
+    echo "Path exits: $target"
+else
+    echo "Path not exits: $target"  
+    exit 1 
+fi
+
+if [ -f "$target" ]; then 
+    echo "Type: File "
+elif [ -d "$target" ]; then
+    echo "Type: Dire"
+elif [ -L "$target" ]; then
+        echo "Type: Symbolic link"
+else
+    echo "Type: Other file type"
+fi
+
+if [ -w "$target" ]; then
+    echo "Writable: Yes"
+else 
+    echo "Writable: No"
+fi
+
+if [ -r "$target" ]; then
+    echo "Readable: Yes"
+else 
+    echo "Readable: No"
+fi
+
+if [ -x "$target" ]; then
+    echo "Executable: Yes"
+else 
+    echo "Executable: No"
+fi
+
