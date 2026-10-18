@@ -95,3 +95,25 @@ A Bash wrapper for `ls` that supports selected options and multiple file or dire
 - Defaults to the current directory when no paths are provided.
 
 **Requirements:** Bash and `ls`.
+
+# File and Directory Checker
+
+A Bash script that checks whether a path exists, identifies its type, and checks read, write, and execute permissions.
+
+## Usage
+
+```bash
+chmod +x mytest
+./mytest <file_or_directory>
+```
+
+## Features
+
+- Checks whether the path exists.
+- Identifies regular files, directories, and symbolic links.
+- Checks read, write, and execute/search permissions.
+
+## Requirements
+
+- Linux or a Bash-compatible environment.
+
