@@ -117,3 +117,27 @@ chmod +x mytest
 
 - Linux or a Bash-compatible environment.
 
+# User Information Tool
+
+A Bash script that retrieves Linux user information, inspects home directory contents, lists user processes, and copies the home directory to `/tmp`.
+
+## Features
+
+- Retrieves user account details using `getent`.
+- Displays home directory files and metadata.
+- Lists processes owned by the specified user.
+- Copies home directory contents while preserving available file attributes.
+
+## Usage
+
+```bash
+chmod +x user_info.sh
+./user_info.sh
+```
+
+## Requirements
+
+- Linux
+- Bash and standard Linux utilities (`getent`, `find`, `stat`, `cp`, `ps`)
+
+**Note:** The copy operation may contain sensitive user data. `/tmp` should not be treated as permanent or secure backup storage.
