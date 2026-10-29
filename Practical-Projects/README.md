@@ -1,44 +1,28 @@
+# Practical Projects
 
-# Log Rotation and Cleanup Script
+This directory contains small, hands-on projects focused on Linux administration, Bash scripting, and infrastructure automation.
 
-## Description
-A Bash script that automates log file management by rotating large log files, compressing them, and deleting old compressed logs.
+Each project has its own directory with the script files and a README explaining its purpose, features, requirements, and usage.
 
-## Features
-- Checks log files in `/var/log/myapp`.
-- Rotates log files larger than 5 MB.
-- Adds the current date to rotated log filenames.
-- Compresses rotated logs using `gzip`.
-- Deletes compressed logs older than 30 days.
+## Projects
 
-## Configuration
-- `LOG_DIR`: Directory containing log files.
-- `MAX_LOG_SIZE`: Maximum log size in bytes (5 MB).
-- `MAX_LOG_AGE`: Maximum age of compressed logs in days (30 days).
+### 1. System Resource Monitor
 
-## Usage
+A Bash script that checks CPU, memory, and disk usage on a Linux system and displays warnings when usage exceeds configured thresholds.
 
-1. Save the script as `log_rotate.sh`.
-2. Make it executable:
+**Topics:** Bash Scripting, Linux Administration, System Monitoring.
 
-   ```bash
-   chmod +x log_rotate.sh
-   ```
+[View Project](./system-resource-monitor/)
 
-3. Run the script:
+### 2. Log Rotation and Cleanup
 
-   ```bash
-   sudo ./log_rotate.sh
-   ```
+A Bash script that automates log file management by checking file size and age.
 
-## Requirements
-- Bash
-- `stat`
-- `find`
-- `gzip`
-- Appropriate permissions to access and modify the log directory.
+**Topics:** Bash Scripting, Linux Administration, Log Management.
 
-## Notes
-- Update `LOG_DIR` to match your application's log directory.
-- Test the script in a safe directory before using it on production logs.
-- This script is intended for Linux systems.
+[View Project](./Log%20Rotation%20and%20Cleanup%20Script/)
+
+## Purpose
+
+These projects are part of my hands-on practice in Linux administration and infrastructure automation. They help me improve my scripting skills and apply Linux concepts to practical tasks.
+
